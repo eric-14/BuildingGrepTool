@@ -1,8 +1,11 @@
 #include <iostream>
 #include <string>
+#include "matchingOptions.h"
 
 bool match_pattern(const std::string& input_line, const std::string& pattern) {
+ 
     if (pattern.length() == 1) {
+        
         return input_line.find(pattern) != std::string::npos;
     }
     else {
@@ -46,4 +49,13 @@ int main(int argc, char* argv[]) {
         std::cerr << e.what() << std::endl;
         return 1;
     }
+
+    //code runs if there is a pattern 
+    matchingOptions matching;
+    return matching.digitMatcher(inputline, pattern);
+    
+    
+    
+
+
 }
