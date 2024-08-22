@@ -12,7 +12,7 @@ matchingOptions::digitMatcher(const std::string &line, const std::string &patter
                 i = stoi(line[i]);  // convert the next line parameter into integer
                 return 0;
             }
-            catch (const std::invalid_argument&) {
+            catch (const std::invalid_argument &e) {
                 std::cout <<"invalid argument passed to stoi "<<line[i] <<std::endl;
                 return 1;
             }
