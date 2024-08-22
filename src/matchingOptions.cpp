@@ -9,7 +9,7 @@ matchingOptions::digitMatcher(const std::string &line, const std::string &patter
        for(int i =0; i < line.length(); i++){
          try {
                 
-                i = std::stoi(line[i]);  // convert the next line parameter into integer
+                i = atoi(line[i]);  // convert the next line parameter into integer
                 return 0;
             }
             catch (const std::invalid_argument& e) {
