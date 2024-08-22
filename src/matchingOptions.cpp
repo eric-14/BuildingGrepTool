@@ -9,10 +9,10 @@ matchingOptions::digitMatcher(const std::string &line, const std::string &patter
        for(int i =0; i < line.length(); i++){
          try {
                 
-                i = stoi(line[i]);  // convert the next line parameter into integer
+                i = std::stoi(line[i]);  // convert the next line parameter into integer
                 return 0;
             }
-            catch (const std::invalid_argument &e) {
+            catch (const std::invalid_argument& e) {
                 std::cout <<"invalid argument passed to stoi "<<line[i] <<std::endl;
                 return 1;
             }
