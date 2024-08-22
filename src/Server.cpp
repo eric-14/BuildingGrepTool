@@ -52,7 +52,7 @@ int main(int argc, char* argv[]) {
 
     //code runs if there is a pattern 
     matchingOptions matching;
-    return matching.digitMatcher(inputline, pattern);
+    return matching.digitMatcher(input_line, pattern);
     
     
     
