@@ -1,4 +1,10 @@
 #pragma once 
+
+
+#ifndef MATCHING_OPTIONS_H
+#define MATCHING_OPTIONS_H
+
+
 #include <map>
 #include <string>
 #include <stdexcept>
@@ -30,3 +36,5 @@ matchingOptions::matchingOptions()
 matchingOptions::~matchingOptions()
 {
 }
+
+#endif
