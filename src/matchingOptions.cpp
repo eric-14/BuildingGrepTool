@@ -2,7 +2,7 @@
 
 
 
-matchingOptions::digitMatcher(const std::string &line, const std::string &pattern){
+int matchingOptions::digitMatcher(const std::string &line, const std::string &pattern){
     //matching digit string options
     std::string substring; 
     if(pattern == "/d"){
