@@ -12,7 +12,7 @@ bool matchingOptions::digitMatcher(const std::string &line, const std::string &p
     std::cout<<"calling digitMatcher "<<std::endl;
     //matching digit string options
     std::string substring; 
-    if(pattern == "/d"){
+    if(pattern == "\\d"){
         //this is a d
       // for(int i =0; i < line.size(); i++){
          try {
