@@ -1,6 +1,9 @@
 #include <map>
 #include <string>
 #include <stdexcept>
+#include <iostream> 
+
+
 class matchingOptions
 {
 private:
