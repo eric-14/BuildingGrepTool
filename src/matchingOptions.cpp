@@ -14,7 +14,7 @@ matchingOptions::digitMatcher(const std::string &line, const std::string &patter
                 //i = atoi(line[i]);  // convert the next line parameter into integer
                 return 0;
             }
-            catch (const std::runtime_error& e) {
+            catch (const std::invalid_argument& e) {
                 std::cout <<"invalid argument passed to stoi "<<substring<<" "<<e.what()<<std::endl;
                 return 1;
             }
