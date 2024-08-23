@@ -4,7 +4,9 @@ matchingOptions::matchingOptions(){
     std::cout<<" Matching options function "<<std::endl; 
 
 }
-matchingOptions::~matchingOptions();
+matchingOptions::~matchingOptions(){
+    
+};
 
 int matchingOptions::digitMatcher(const std::string &line, const std::string &pattern){
     //matching digit string options
