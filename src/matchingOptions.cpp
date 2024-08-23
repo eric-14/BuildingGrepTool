@@ -9,6 +9,7 @@ matchingOptions::~matchingOptions(){
 };
 
 bool matchingOptions::digitMatcher(const std::string &line, const std::string &pattern){
+    std::cout<<"calling digitMatcher "<<std::endl;
     //matching digit string options
     std::string substring; 
     if(pattern == "/d"){
