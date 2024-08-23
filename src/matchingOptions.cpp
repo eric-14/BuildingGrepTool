@@ -3,17 +3,19 @@
 
 
 matchingOptions::digitMatcher(const std::string &line, const std::string &pattern){
-    //matching digit string options 
+    //matching digit string options
+    std::string substring; 
     if(pattern == "/d"){
         //this is a d
-       for(int i =0; i < line.length(); i++){
+       for(int i =0; i < line.size(); i++){
          try {
+                substring = line.substr(0, i);
                 
-                i = atoi(line[i]);  // convert the next line parameter into integer
+                //i = atoi(line[i]);  // convert the next line parameter into integer
                 return 0;
             }
             catch (const std::invalid_argument& e) {
-                std::cout <<"invalid argument passed to stoi "<<line[i] <<std::endl;
+                std::cout <<"invalid argument passed to stoi "<<substring<<std::endl;
                 return 1;
             }
           
