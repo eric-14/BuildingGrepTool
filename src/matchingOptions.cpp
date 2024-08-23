@@ -17,10 +17,9 @@ int matchingOptions::digitMatcher(const std::string &line, const std::string &pa
             catch (const std::invalid_argument& e) {
                 std::cout <<"invalid argument passed to stoi "<<substring<<" "<<e.what()<<std::endl;
                 return 1;
-            }
-          
-
+            } 
        }
+       return 1; 
         
     }else{
         return 1;
