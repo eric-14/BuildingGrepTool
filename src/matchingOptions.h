@@ -29,12 +29,5 @@ public:
     ~matchingOptions();
 };
 
-matchingOptions::matchingOptions()
-{
-}
-
-matchingOptions::~matchingOptions()
-{
-}
 
 #endif
