@@ -5,10 +5,10 @@ matchingOptions::matchingOptions(){
 
 }
 matchingOptions::~matchingOptions(){
-    
+
 };
 
-int matchingOptions::digitMatcher(const std::string &line, const std::string &pattern){
+bool matchingOptions::digitMatcher(const std::string &line, const std::string &pattern){
     //matching digit string options
     std::string substring; 
     if(pattern == "/d"){
@@ -16,18 +16,20 @@ int matchingOptions::digitMatcher(const std::string &line, const std::string &pa
        for(int i =0; i < line.size(); i++){
          try {
                 substring = line.substr(0, i);
+                int value = std::stoi(substring); // try to convert string to int
+                std::cout<<"The value of the function is "<<value<<std::endl;
                 
                 //i = atoi(line[i]);  // convert the next line parameter into integer
-                return 0;
+                return true;
             }
             catch (const std::invalid_argument& e) {
                 std::cout <<"invalid argument passed to stoi "<<substring<<" "<<e.what()<<std::endl;
-                return 1;
+                return false;
             } 
        }
-       return 1; 
+       return false; 
         
     }else{
-        return 1;
+        return false;
     }
 }

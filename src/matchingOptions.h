@@ -21,7 +21,7 @@ private:
 public:
     //function to match digit 
 
-    int digitMatcher(const std::string &line, const std::string &pattern);
+    bool digitMatcher(const std::string &line, const std::string &pattern);
 
 
     matchingOptions(/* args */);
