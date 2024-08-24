@@ -23,6 +23,8 @@ bool matchingFn(const std::string &line, const std::string &pattern){
         std::cout <<"Got an alphanumeric character "<<result<<std::endl;
         return result; 
     }
+    //for any unsopported functions 
+    return false;
 }
 
 bool match_pattern(const std::string& input_line, const std::string& pattern) {
@@ -32,6 +34,7 @@ bool match_pattern(const std::string& input_line, const std::string& pattern) {
         return input_line.find(pattern) != std::string::npos;
     }else {
         throw std::runtime_error("Unhandled pattern " + pattern);
+       
     }
 }
 
