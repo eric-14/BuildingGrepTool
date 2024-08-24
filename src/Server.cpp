@@ -4,18 +4,19 @@
 
 bool matchingFn(const std::string &line, const std::string &pattern){
     std::regex reg("^(?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]+$");
-    if(pattern == "\\w"){
+    if(pattern == "\\d"){                   
+        int value = std::stoi(input_line); // try to convert string to int
+        std::cout<<"The value of the function is "<<value<<std::endl;
+        return true;        
+    }
+    else if(pattern == "\\w"){
         bool result = std::regex_match(line, reg); 
         return result; 
     }
 }
 
 bool match_pattern(const std::string& input_line, const std::string& pattern) {
-    if(pattern == "\\d"){                   
-        int value = std::stoi(input_line); // try to convert string to int
-        std::cout<<"The value of the function is "<<value<<std::endl;
-        return true;        
-    }
+    
     return matchingFn(input_line, pattern); 
     if (pattern.length() == 1) {        
         return input_line.find(pattern) != std::string::npos;
