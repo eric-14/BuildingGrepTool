@@ -34,6 +34,16 @@ bool matchingFn(const std::string &line, const std::string &pattern){
         bool result = std::regex_match(line, reg); 
         std::cout <<"Got an alphanumeric character "<<result<<std::endl;
         return result; 
+    }else{
+        std::regex characters("^[A-Za-z]"); 
+        std::regex result("^*"+line[0]); 
+
+        //check if pattern consists of characters
+
+        if(std::regex_match(pattern, characters) && std::regex_match(line, result)){
+            std::cout<<"matched flag using regex "
+            return true;
+        }
     }
     //for any unsopported functions 
     return false;
@@ -70,11 +80,14 @@ int main(int argc, char* argv[]) {
         std::cerr << "Expected first argument to be '-E'" << std::endl;
         return 1;
     }
+    
+    
 
     // Uncomment this block to pass the first stage
     //
     std::string input_line;
     std::getline(std::cin, input_line);
+
     
     try {
         if (match_pattern(input_line, pattern)) {
