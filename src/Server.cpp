@@ -3,9 +3,9 @@
 #include <regex>
 
 bool matchingFn(const std::string &line, const std::string &pattern){
-    std::string regex = "^(?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]+$";
+    std::regex pattern("^(?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]+$");
     if(pattern == "\\w"){
-        bool result = std::regex_match(line, regex); 
+        bool result = std::regex_match(line, pattern); 
         return result; 
     }
 }
