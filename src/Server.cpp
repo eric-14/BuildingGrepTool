@@ -11,7 +11,7 @@ bool matchingFn(const std::string &line, const std::string &pattern){
     }
     else if(pattern == "\\w"){
         bool result = std::regex_match(line, reg); 
-        std::cout <<"Got an alphanumeric character "<<std::endl;
+        std::cout <<"Got an alphanumeric character "<<result<<std::endl;
         return result; 
     }
 }
