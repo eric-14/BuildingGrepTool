@@ -9,7 +9,7 @@ bool flagMatcher(const std::string &line,const std::string &flag){
         int size = line.length(); 
         std::cout<<"The line is "<<line<< std::endl;
 
-        std::regex pattern1("^[]")
+        std::regex pattern1("^[]");
     }
 }
 bool matchingFn(const std::string &line, const std::string &pattern){
