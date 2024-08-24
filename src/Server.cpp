@@ -10,11 +10,6 @@ bool match_pattern(const std::string& input_line, const std::string& pattern) {
      }
     if (pattern.length() == 1) {        
         return input_line.find(pattern) != std::string::npos;
-    }else if(pattern.length() > 1){
-        //code runs if there is a pattern 
-        matchingOptions matching;
-        return matching.digitMatcher(input_line, pattern);
-    }
     else {
         throw std::runtime_error("Unhandled pattern " + pattern);
     }
@@ -56,13 +51,7 @@ int main(int argc, char* argv[]) {
         std::cerr << e.what() << std::endl;
         return 1;
     }
-
-    // //code runs if there is a pattern 
-    // matchingOptions matching;
-    // return matching.digitMatcher(input_line, pattern);
-    
-    
-    
+   
 
 
 }
