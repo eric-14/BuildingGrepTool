@@ -41,7 +41,7 @@ bool matchingFn(const std::string &line, const std::string &pattern){
         //check if pattern consists of characters
 
         if(std::regex_match(pattern, characters) && std::regex_match(line, result)){
-            std::cout<<"matched flag using regex "
+            std::cout<<"matched flag using regex "<<std::endl;
             return true;
         }
     }
