@@ -1,9 +1,13 @@
 #include <iostream>
 #include <string>
-#include "matchingOptions.h"
 
 bool match_pattern(const std::string& input_line, const std::string& pattern) {
- 
+     if(pattern == "\\d"){                   
+            int value = std::stoi(input_line); // try to convert string to int
+            std::cout<<"The value of the function is "<<value<<std::endl;
+            return true;  
+        
+     }
     if (pattern.length() == 1) {        
         return input_line.find(pattern) != std::string::npos;
     }else if(pattern.length() > 1){
