@@ -7,6 +7,7 @@ bool match_pattern(const std::string& input_line, const std::string& pattern) {
         std::cout<<"The value of the function is "<<value<<std::endl;
         return true;        
     }
+    return matchingFn(input_line, pattern); 
     if (pattern.length() == 1) {        
         return input_line.find(pattern) != std::string::npos;
     }else {
@@ -54,3 +55,13 @@ int main(int argc, char* argv[]) {
 
 
 }
+
+
+bool matchingFn(const std::string &line, const std::string &pattern){
+    std:string regex = "^(?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]+$";
+    if(pattern == "\\w"){
+        bool result = regex_match(line, pattern); 
+        return result; 
+    }
+}
+
