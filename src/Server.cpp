@@ -4,10 +4,19 @@
 
 bool matchingFn(const std::string &line, const std::string &pattern){
     std::regex reg("^[A-Za-z0-9]+$");
-    if(pattern == "\\d"){                   
-        int value = std::stoi(line); // try to convert string to int
-        std::cout<<"The value of the function is "<<value<<std::endl;
-        return true;        
+    if(pattern == "\\d"){  
+        try
+        {
+            int value = std::stoi(line); // try to convert string to int
+            std::cout<<"The value of the function is "<<value<<std::endl;
+            return true; 
+        }
+        catch(const std::exception& e)
+        {
+            return false;
+        }
+                         
+              
     }
     else if(pattern == "\\w"){
         bool result = std::regex_match(line, reg); 
