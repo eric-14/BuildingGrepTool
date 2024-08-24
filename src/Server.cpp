@@ -3,7 +3,7 @@
 #include <regex>
 
 bool matchingFn(const std::string &line, const std::string &pattern){
-    std::regex reg("^(?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]+$");
+    std::regex reg("^[A-Za-z0-9]+$");
     if(pattern == "\\d"){                   
         int value = std::stoi(line); // try to convert string to int
         std::cout<<"The value of the function is "<<value<<std::endl;
