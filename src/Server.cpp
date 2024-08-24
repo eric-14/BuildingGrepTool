@@ -51,13 +51,14 @@ bool matchingFn(const std::string &line, const std::string &pattern){
 
 bool match_pattern(const std::string& input_line, const std::string& pattern) {
     
-    return matchingFn(input_line, pattern); 
+    
     if (pattern.length() == 1) {        
         return input_line.find(pattern) != std::string::npos;
     }else {
         throw std::runtime_error("Unhandled pattern " + pattern);
        
     }
+    return matchingFn(input_line, pattern); 
 }
 
 int main(int argc, char* argv[]) {
@@ -96,6 +97,7 @@ int main(int argc, char* argv[]) {
             return 1;
         }
     } catch (const std::runtime_error& e) {
+        std::cout<<"line 99 error"<<std::endl;
         std::cerr << e.what() << std::endl;
         return 1;
     }
