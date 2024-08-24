@@ -5,6 +5,7 @@
 bool matchingFn(const std::string &line, const std::string &pattern){
     std::regex reg("^[A-Za-z0-9]+$");
     if(pattern == "\\d"){  
+        std::cout<<"got a digit value "<<std::endl;
         try
         {
             int value = std::stoi(line); // try to convert string to int

@@ -15,6 +15,7 @@ bool matchingOptions::digitMatcher(const std::string &line, const std::string &p
     if(pattern == "\\d"){
         //this is a d
       // for(int i =0; i < line.size(); i++){
+        std::cout<<"Digits pattern"<<std::endl;
          try {
                 
                 int value = std::stoi(line); // try to convert string to int
