@@ -41,10 +41,10 @@ bool matchingFn(const std::string &line, const std::string &pattern){
         std::string generic =pattern; //"^*"+
         std::cout<<"Line 42 line--> "<<line<<std::endl;
         std::cout<<"Line 43 "<<generic<<std::endl;
-        std::regex result(pattern); 
+        std::regex rgPattern("^"+pattern); 
 
         //check if pattern consists of characters
-        bool result1 = std::regex_match(line, result); 
+        bool result1 = std::regex_match(line, rgPattern); 
         std::cout <<"Result 1 of the fn is "<<result1<<std::endl;
         bool result2 = std::regex_match(pattern, characters);
         std::cout <<"Result 2 of the fn is "<<result2<<std::endl;
