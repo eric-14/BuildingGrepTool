@@ -40,7 +40,7 @@ bool matchingFn(const std::string &line, const std::string &pattern){
       
         std::string generic =pattern; //"^*"+
         std::cout<<"Line 42 line--> "<<line<<std::endl;
-        std::cout<<"Line 43 "<<generic<<std::endl;
+        std::cout<<"Line 43 "<<generic<<" "<<"^"+pattern<<std::endl;
         std::regex rgPattern("^"+pattern); 
 
         //check if pattern consists of characters
