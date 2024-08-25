@@ -35,9 +35,12 @@ bool matchingFn(const std::string &line, const std::string &pattern){
         std::cout <<"Got an alphanumeric character "<<result<<std::endl;
         return result; 
     }else{
-        std::cout<<"Line 38 "<<std::endl;
+        
         std::regex characters("^[A-Za-z]"); 
-        std::regex result("^*"+line[0]); 
+      
+        std::string generic = "^*"+line[0]; 
+        std::cout<<"Line 42 "<<generic<<std::endl;
+        std::regex result(generic); 
 
         //check if pattern consists of characters
 
