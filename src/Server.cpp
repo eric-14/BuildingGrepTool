@@ -35,6 +35,7 @@ bool matchingFn(const std::string &line, const std::string &pattern){
         std::cout <<"Got an alphanumeric character "<<result<<std::endl;
         return result; 
     }else{
+        std::cout<<"Line 38 "<<std::endl;
         std::regex characters("^[A-Za-z]"); 
         std::regex result("^*"+line[0]); 
 
@@ -50,7 +51,7 @@ bool matchingFn(const std::string &line, const std::string &pattern){
 }
 
 bool match_pattern(const std::string& input_line, const std::string& pattern) {
-    std::cout<<"line 53 the string is "<<pattern<<std::endl;
+    //std::cout<<"line 53 the string is "<<pattern<<std::endl;
     return matchingFn(input_line, pattern); 
     if (pattern.length() == 1) {        
         return input_line.find(pattern) != std::string::npos;
