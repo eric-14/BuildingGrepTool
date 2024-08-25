@@ -7,7 +7,7 @@ bool flagMatcher(const std::string &line,const std::string &flag){
     if( flag == "-E"){
         //found the E flag
         int size = line.length(); 
-        std::cout<<"The line is "<<line<< std::endl;
+        std::cout<<"line 10 The line is "<<line<< std::endl;
 
         std::regex pattern1("^[]");
     }
@@ -50,7 +50,7 @@ bool matchingFn(const std::string &line, const std::string &pattern){
 }
 
 bool match_pattern(const std::string& input_line, const std::string& pattern) {
-    
+    std::cout<<"line 53 the string is "<<pattern<<std::endl;
     return matchingFn(input_line, pattern); 
     if (pattern.length() == 1) {        
         return input_line.find(pattern) != std::string::npos;
