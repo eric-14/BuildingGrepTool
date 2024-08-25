@@ -36,7 +36,7 @@ bool matchingFn(const std::string &line, const std::string &pattern){
         return result; 
     }else{
         
-        std::regex characters("^[A-Za-z]*"); 
+        std::regex characters("[a-zA-Z]*"); 
       
         std::string generic =pattern; //"^*"+
         std::cout<<"Line 42 line--> "<<line<<std::endl;
