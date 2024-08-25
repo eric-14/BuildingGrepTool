@@ -41,7 +41,7 @@ bool matchingFn(const std::string &line, const std::string &pattern){
         std::string generic =pattern; //"^*"+
         std::cout<<"Line 42 line--> "<<line<<std::endl;
         std::cout<<"Line 43 "<<generic<<std::endl;
-        std::regex result(generic); 
+        std::regex result(pattern); 
 
         //check if pattern consists of characters
         bool result1 = std::regex_match(line, result); 
